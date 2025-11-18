@@ -10,21 +10,21 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
-public class SimpleTest {
+public class SimpleTest extends TestBase{
 
     @Test
     public void issueSearchTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        open("https://github.com");
+        open("/");
 
-        $(".header-search-input").click();
-        $(".header-search-input").sendKeys("eroshenkoam/allure-example");
-        $(".header-search-input").submit();
+        $("[class='search-input']").click();
+        $("[id='query-builder-test']").sendKeys(REPOSITORY);
+        $("[id='query-builder-test']").submit();
 
-        $(linkText("eroshenkoam/allure-example")).click();
+        $(linkText(REPOSITORY)).click();
         $("#issues-tab").click();
-        $(withText("#80")).should(Condition.exist);
+        $(withText("No results")).should(Condition.exist);
     }
 
 }

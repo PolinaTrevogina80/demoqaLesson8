@@ -1,0 +1,19 @@
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.Test;
+
+public class StepTest extends TestBase{
+
+    private static final String ISSUES = "Issues";
+
+    @Test
+    void issueTabWithStepsTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        WebSteps steps = new WebSteps();
+
+        steps.openMainPage();
+        steps.searchRepository(REPOSITORY);
+        steps.goToRepository();
+        steps.shouldSeeIssues(ISSUES);
+    }
+}

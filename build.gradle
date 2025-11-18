@@ -27,9 +27,10 @@ repositories {
 dependencies {
     testImplementation(
             'org.junit.jupiter:junit-jupiter-api:5.9.0',
-            'com.codeborne:selenide:6.7.2',
+            'com.codeborne:selenide:7.10.1',
             'io.qameta.allure:allure-selenide:2.19.0',
-            'io.github.bonigarcia:webdrivermanager:5.8.0'
+            'io.github.bonigarcia:webdrivermanager:5.8.0',
+            'org.aspectj:aspectjweaver:1.9.22'
 
     )
 

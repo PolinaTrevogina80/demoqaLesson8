@@ -3,6 +3,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestBase {
+    public static final String REPOSITORY = "PolinaTrevogina80/demoqaLesson8";
+
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
