@@ -1,5 +1,3 @@
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,8 +9,6 @@ import static org.openqa.selenium.By.linkText;
 public class LambdaTest extends TestBase{
     @Test
     void issueTabWithLambdaTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open main page", () -> {
             open("/");

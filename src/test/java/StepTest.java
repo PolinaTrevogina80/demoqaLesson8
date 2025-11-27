@@ -1,6 +1,5 @@
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
+
 
 public class StepTest extends TestBase{
 
@@ -8,7 +7,6 @@ public class StepTest extends TestBase{
 
     @Test
     void issueTabWithStepsTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();
 
         steps.openMainPage();
@@ -17,3 +15,5 @@ public class StepTest extends TestBase{
         steps.shouldSeeIssues(ISSUES);
     }
 }
+
+
