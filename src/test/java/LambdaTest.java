@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 
-public class LambdaTest extends TestBase{
+public class LambdaTest extends TestBase {
     @Test
     void issueTabWithLambdaTest() {
 

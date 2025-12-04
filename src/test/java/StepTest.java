@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-
-public class StepTest extends TestBase{
+public class StepTest extends TestBase {
 
     private static final String ISSUES = "Issues";
 
